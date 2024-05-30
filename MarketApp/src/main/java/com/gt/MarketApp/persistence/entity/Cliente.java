@@ -3,9 +3,11 @@ package com.gt.MarketApp.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name="clientes")
-public class cliente {
+public class Cliente {
 
 
     @Id
@@ -22,11 +24,15 @@ public class cliente {
     @Column(name="correo_electronico")
     private String correoElectronico;
 
+    @OneToMany(mappedBy = "cliente")
+    private List<Compra> compras;
+
+
     public String getId() {
         return id;
     }
 
-    public cliente setId(String id) {
+    public Cliente setId(String id) {
         this.id = id;
         return this;
     }
@@ -35,7 +41,7 @@ public class cliente {
         return nombre;
     }
 
-    public cliente setNombre(String nombre) {
+    public Cliente setNombre(String nombre) {
         this.nombre = nombre;
         return this;
     }
@@ -44,7 +50,7 @@ public class cliente {
         return apellidos;
     }
 
-    public cliente setApellidos(String apellidos) {
+    public Cliente setApellidos(String apellidos) {
         this.apellidos = apellidos;
         return this;
     }
@@ -53,7 +59,7 @@ public class cliente {
         return celular;
     }
 
-    public cliente setCelular(Long celular) {
+    public Cliente setCelular(Long celular) {
         this.celular = celular;
         return this;
     }
@@ -62,7 +68,7 @@ public class cliente {
         return direccion;
     }
 
-    public cliente setDireccion(String direccion) {
+    public Cliente setDireccion(String direccion) {
         this.direccion = direccion;
         return this;
     }
@@ -71,7 +77,7 @@ public class cliente {
         return correoElectronico;
     }
 
-    public cliente setCorreoElectronico(String correoElectronico) {
+    public Cliente setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
         return this;
     }

@@ -2,10 +2,11 @@ package com.gt.MarketApp.persistence.entity;
 
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="categorias")
-public class categoria {
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,11 +17,16 @@ public class categoria {
 
     private String estado;
 
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
+
+
+
     public String getDescripcion() {
         return descripcion;
     }
 
-    public categoria setDescripcion(String descripcion) {
+    public Categoria setDescripcion(String descripcion) {
         this.descripcion = descripcion;
         return this;
     }
@@ -29,7 +35,7 @@ public class categoria {
         return idCategoria;
     }
 
-    public categoria setIdCategoria(Integer idCategoria) {
+    public Categoria setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
         return this;
     }
@@ -38,7 +44,7 @@ public class categoria {
         return estado;
     }
 
-    public categoria setEstado(String estado) {
+    public Categoria setEstado(String estado) {
         this.estado = estado;
         return this;
     }
