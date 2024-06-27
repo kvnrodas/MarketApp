@@ -48,4 +48,13 @@ public class Categoria {
         this.estado = estado;
         return this;
     }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public Categoria setProductos(List<Producto> productos) {
+        this.productos = productos;
+        return this;
+    }
 }

@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
+
     @Autowired
     private IProductoCrudRepository productoCrudRepository;
 
@@ -39,7 +40,7 @@ public class ProductoRepository implements ProductRepository {
     @Override
     public Optional<List<Product>> getScarseProducts(int quantity) {
 
-        Optional<List<Producto>> productos =  productoCrudRepository.findByIdCantidadStockLessThanAndEstado(quantity);
+        Optional<List<Producto>> productos =  productoCrudRepository.findByCantidadStockLessThanAndEstado(quantity, true);
         return productos.map(prods -> productMapper.toProducts(prods));
 
     }

@@ -102,4 +102,22 @@ public class Producto {
         this.nombre = nombre;
         return this;
     }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public Producto setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+        return this;
+    }
+
+    public List<ComprasProducto> getComprasProductos() {
+        return comprasProductos;
+    }
+
+    public Producto setComprasProductos(List<ComprasProducto> comprasProductos) {
+        this.comprasProductos = comprasProductos;
+        return this;
+    }
 }
