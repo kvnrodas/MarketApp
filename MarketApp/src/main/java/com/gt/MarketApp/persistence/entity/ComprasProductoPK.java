@@ -2,7 +2,9 @@ package com.gt.MarketApp.persistence.entity;
 
 
 
+
 import jakarta.persistence.*;
+
 import java.io.Serializable;
 
 
