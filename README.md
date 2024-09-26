@@ -4,13 +4,12 @@ MarketApp is a simple Spring Boot application that manages products and categori
 
 ## Table of Contents
 
-- [Features](#features)
-- [Technologies](#technologies)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [License](#license)
+ [Features](#features)
+ [Technologies](#technologies)
+ [Prerequisites](#prerequisites)
+ [Usage](#usage)
+ [API Endpoints](#api-endpoints)
+ [License](#license)
 
 ## Features
 
